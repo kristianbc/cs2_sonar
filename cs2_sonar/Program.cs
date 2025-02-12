@@ -37,6 +37,7 @@ namespace cs2_sonar
                 if (localPlayer == IntPtr.Zero)
                 {
                     Console.WriteLine("Failed to find local player.");
+                    return;
                 }
 
                 IntPtr entitylist = Memory.MemoryRead<IntPtr>(processHandle, moduleBase + Offsets.dwEntityList);
