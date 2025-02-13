@@ -11,7 +11,13 @@ namespace cs2_sonar
         public const int LocalPlayerPawn = 0x1889F30;
         public const int dwEntityList = 0x1A359C0;
         public const int m_hPlayerPawn = 0x80C;
-        public const int m_VecOrigin = 0x1324;
+        public const int m_VecOldOrigin = 0x1324;
+        public const int m_iIDEntIndex = 0x1458;
+
+        //engine2
+
+        public const int dwNetworkGameClient = 0x53FCE0;
+        public const int dwNetworkGameClient_isBackgroundMap = 0x281447;
 
     }
 }
