@@ -43,8 +43,8 @@ namespace cs2_sonar
                             IntPtr listEntry2 = Memory.MemoryRead<IntPtr>(cheatbase.ProcessHandle, entitylist + 0x8 * ((pawnHandle & 0x7FFF) >> 9) + 0x10);
                             IntPtr currentPawn = Memory.MemoryRead<IntPtr>(cheatbase.ProcessHandle, listEntry2 + 0x78 * (pawnHandle & 0x1FF));
 
-                            Vector3 entitypos = Memory.MemoryRead<Vector3>(cheatbase.ProcessHandle, currentPawn + Offsets.m_VecOldOrigin);
-                            Vector3 localpos = Memory.MemoryRead<Vector3>(cheatbase.ProcessHandle, cheatbase.LocalPlayer + Offsets.m_VecOldOrigin);
+                            Vector3 entitypos = Memory.MemoryRead<Vector3>(cheatbase.ProcessHandle, currentPawn + Offsets.m_VOldOrigin);
+                            Vector3 localpos = Memory.MemoryRead<Vector3>(cheatbase.ProcessHandle, cheatbase.LocalPlayer + Offsets.m_VOldOrigin);
 
                             float distance = (float)Math.Sqrt(
                             Math.Pow(entitypos.X - localpos.X, 2) +
