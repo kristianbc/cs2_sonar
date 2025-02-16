@@ -8,8 +8,9 @@ namespace cs2_sonar
 {
     public class Buzzer
     {
-        public static void BuzzerModule(Base cheatbase)
+        public static void BuzzerModule(Base cheatbase, CancellationToken token)
         {
+
             while (true)
             {
                 int entityindex = Memory.MemoryRead<int>(cheatbase.ProcessHandle, cheatbase.LocalPlayer + Offsets.m_iIDEntIndex);
@@ -19,8 +20,10 @@ namespace cs2_sonar
                     Console.Beep(150, 500);
                     break;
                 }
+
+                if (token.IsCancellationRequested)
+                    break;
             }
-            
         }
     }
 }

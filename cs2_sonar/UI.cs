@@ -1,6 +1,7 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,16 +9,16 @@ namespace cs2_sonar
 {
     public class UI
     {
-        public static void UIModule(Thread sonarmodule, Thread buzzermodule)
+        public static void UIModule()
         {
             while (true)
             {
-                Console.WriteLine($"(F1) Crosshair sniffer status: {Program.ReturnThreadState(buzzermodule)}");
-                Console.WriteLine($"(F2) Sonar status: {Program.ReturnThreadState(sonarmodule)}");
+                Console.WriteLine($"Buzzer: F1 --> STATUS: {(ThreadToggle.buzzerEnabled ? "ON" : "OFF")}");
+                Console.WriteLine($"Sonar: F2 --> STATUS: {(ThreadToggle.sonarEnabled ? "ON" : "OFF")}");
+
                 Thread.Sleep(1000);
                 Console.Clear();
             }
         }
     }
 }
-*/
